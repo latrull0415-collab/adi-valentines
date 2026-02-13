@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SECRET ❤️</title>
+
+<style>
+body {
+  text-align: center;
+  font-family: Arial;
+  background-color: #ffe6f0;
+  margin-top: 50px;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 18px;
+  margin: 10px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+#yes { background-color: pink; }
+#no { background-color: lightgray; position: relative; }
+
+.heart {
+  position: fixed;
+  bottom: 0;
+  font-size: 20px;
+  animation: float 4s linear infinite;
+}
+
+@keyframes float {
+  from { transform: translateY(0); opacity: 1; }
+  to { transform: translateY(-600px); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<h1>Hi Adi ❤️</h1>
+<h2>Will you be my Valentine?:>hehe</h2>
+
+<img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" width="200"><br>
+
+<button id="yes" onclick="yesClicked()">YES 💖</button>
+<button id="no" onmouseover="moveButton()">NO 😢</button>
+
+<script>
+function yesClicked() {
+  document.body.innerHTML =
+    "<h1>Yay!! I love you ❤️</h1>" +
+    "<img src='https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif' width='220'>";
+}
+
+function moveButton() {
+  var btn = document.getElementById("no");
+  btn.style.position = "absolute";
+  btn.style.top = Math.random()*300 + "px";
+  btn.style.left = Math.random()*300 + "px";
+}
+
+/* floating hearts */
+setInterval(function() {
+  var heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "❤️";
+  heart.style.left = Math.random()*100 + "vw";
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),4000);
+}, 600);
+</script>
+
+</body>
+</html>
