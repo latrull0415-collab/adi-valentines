@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For You ❤️</title>
+<style>
+body {
+  text-align: center;
+  font-family: Arial;
+  background-color: #ffe6f0;
+  margin-top: 100px;
+}
+button {
+  padding: 15px 25px;
+  font-size: 18px;
+  margin: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Hi Love ❤️</h1>
+<p>I have one important question...</p>
+<h2>Will you be my Valentine?</h2>
+
+<button onclick="yes()">YES 💖</button>
+<button onclick="no()">NO 😢</button>
+
+<script>
+function yes() {
+  document.body.innerHTML = "<h1>Yay!! I love you ❤️</h1>";
+}
+
+function no() {
+  document.body.innerHTML = "<h1>I'll ask again tomorrow 😌</h1>";
+}
+</script>
+
+</body>
+</html>
